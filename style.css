@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header nav {
+    background-color: orangered;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  header nav ul {
+    float: right;
+    margin: 0;
+  }
+  
+  header nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  
+  header nav ul li a {
+    display: block;
+    width: 150px;
+    line-height: 50px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family:'Open Sans', sans-serif;
+  }
+  
+  header nav ul li a:link, header nav ul li a:visited {
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+  }
+  
+  header nav ul li a:hover, header nav ul li a:hover {
+    background-color: #fbff00;
+    color: black;
+  } 
+  
+  footer{
+    display:block;
+    margin:0;
+    padding:0;
+  }
+  
+  footer p {
+    position: absolute;
+    font-family:'Open Sans', sans-serif;
+    font-weight: normal;
+    background-color: black;
+    font-size: 13px;
+    color: #FFF;
+    width: 100%;
+    height: 100px;    
+    text-align: center;
+    line-height: 100px;
+    margin:0;
+  }
+
+.formContato > iframe {
+    width: 100%;
+    height: 600px!important;
+    margin-top: 3%;
+}
+
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+}
+
+.secaoDestaque{
+    text-align: left;
+    background-size: cover;
+    background-color: #00161c;
+    padding: 10em 2em 3em 2em;
+    color: #fff;
+}
+
+.descricaoDestaque {
+    background-size: cover;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    line-height: 1;
+    background-color: yellow;
+    text-align: justify;
+    padding: 1em;
+  }
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+@media (min-width: 500px) {
+    .secaoDestaque {
+    background-image: url(../imagens/notícia1.png);
+    max-height: 400px;
+    }
+}
+
+   .contato {
+    display:table;
+    width:100%;
+    padding:0;
+    position: relative;
+    margin:0;
+  }
+  
+  .contatoWhatsapp{
+    display:table-cell;
+    float:right;
+    margin:20px 20px 0 0;
+  }
+  
+  .contatoEmail{
+    display:table-cell;
+    float:right;
+    margin-top:20px;
+    margin-right:10px;
+  }
+
+  .secaoVideo{
+    display:table;
+    background-color:orangered;
+    width:100%;
+    padding:40px 0;
+  }
+  
+  .secaoVideoTexto{
+    display:table-cell;
+    float:left;
+    width:50%;
+    padding: 0em 2em 3em 2em;
+    text-align: justify;
+  }
+  
+  .secaoVideoTexto p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:30px;
+    color:#242529;
+  }
+  
+  .video{
+    display:table-cell;
+    float:right;
+    width:40%;
+}
