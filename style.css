@@ -175,7 +175,7 @@ a{
  
 .box-title h1{
   width:100%;
-  /*padding:10px 0 10px 0;*/
+  padding:10px 0 10px 0;
   margin:0;
   font-family:'Open Sans', sans-serif;
   font-size:50px;
@@ -319,3 +319,45 @@ a{
   font-size:16px;
   color:#fff;
 }
+ 
+
+
+.abrir{
+    background-color: #ff7200;
+    border: none;
+    font-size: 16px;
+    color: #FFFFFF;
+    width: 200px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius:10px;
+    display:block;
+    margin: 5px;
+}
+
+.abrir a {
+    text-decoration:none;
+    font-weight:bold;
+    font-size:20px;
+    color:#FFFFFF;
+  }
+  
+  .abrir:hover{
+    transform:scale(1.2);
+  }
+   
+  .abrir a:hover{
+    text-decoration:none;
+    font-size:20px;
+    color:#FFFFFF;
+    transform: scale(1.2);
+  }
+   
+  .abrir a:visited{
+    text-decoration:none;
+    font-size:16px;
+    color:#fff;
+  }
