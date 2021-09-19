@@ -11,21 +11,24 @@
     <header>
         <nav>
             <label class="logo"></label>
-            <a href="index.html"><img src="imagens/mapa-de-Portugal-3.png" width="80px" height="70px" alt="logotipo"></a>
+            <a class="logotipo" href="index.html"><img src="imagens/mapa-de-Portugal-3.png" width="90px" height="80px" alt="logotipo"></a>
             <ul class="nav-menu">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="quemsomos.html">QUEM SOMOS</a></li>
                 <li><a href="contato.html">CONTATO</a></li>
                 <li><a href="saibamais.html">SAIBA MAIS</a></li>
             </ul>
-            <ul class="btn-container">
-                <li><button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button></li> 
-                <li><button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button></li>
-            </ul>
-            <ul>
-                <li><a href="index.html" accesskey="2">Início do Menu [Alt + 2]</a></li>
-                <li><a href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Alto contraste [Alt + 3]</a></li>
-            </ul>
+            <ul class="nav-acessibilidade">
+                <li name="increase-font" id="increase-font" title="Aumentar fonte">
+                    <img src="./imagens/aumento-de-letra.svg" width="50px" height="40px" alt="" style="margin-bottom: -14px;"> 
+                </li> 
+                <li name="decrease-font" id="decrease-font" title="Diminuir fonte">
+                    <img src="./imagens/diminuicao-de-letra.svg" width="50px" height="40px" alt="" style="margin-bottom: -14px;">
+                </li>
+                <a href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">
+                    <img src="./imagens/olho.svg" width="50px" height="40px" alt="" style="margin-bottom: -14px;">
+                </a>
+            </ul>    
         </nav>
     </header>
     <section class="container1">

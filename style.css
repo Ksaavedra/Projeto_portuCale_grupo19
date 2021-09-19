@@ -25,17 +25,25 @@ a {
   text-decoration: none;
 }
 
-p
-{
+p {
   line-height: 1.5em;
   margin-bottom: 10px;
   margin-top: 10px;
+}
+
+.logotipo {
+  float: left;
+}
+
+.nav-menu {
+  float: left;
 }
 
 header nav {
   background-color: orangered;
   display: inline-block;
   width: 100%;
+  margin-bottom: -5px;
 }
 
 header nav ul {
@@ -87,8 +95,7 @@ footer {
   text-align: center;
 }
 
-footer .copyright
-{
+footer .copyright {
   text-align: center;
 }
 
@@ -441,6 +448,7 @@ a[data-modal]:active {
   padding: 10px;
   font-size: 18px;
   font-weight: normal;
+  text-align: center;
 }
 
 .imgDestaque {
@@ -520,8 +528,24 @@ a[data-modal]:active {
   position: relative;
 }
 
-@media (min-width: 320px) {
+@media (min-width: 360px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+  .nav-menu {
+    min-width: 100%;
+    text-align: center;
+    margin-top: -20%;
+    display: grid;
+  }
+
+  .nav-menu li {
+    margin: -15px 5px;
+  }
+
+  .nav-acessibilidade {
+    min-width: 100%;
+    text-align: center;
+  }
+  
 }
 
 @media (min-width: 480px) {
@@ -537,14 +561,33 @@ a[data-modal]:active {
 
 @media (min-width: 600px) {
   /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+  .nav-menu {
+    min-width: 85%;
+    margin-top: 2%;
+    display: block;
+  }
+
+  .nav-acessibilidade {
+    min-width: 85%;
+    text-align: center;
+  }
+  
 }
 
 @media (min-width: 801px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   /* big landscape tablets, laptops, and desktops */
+  .nav-menu {
+    min-width: auto;
+  }
+
+  .nav-acessibilidade {
+    float: inherit;
+    margin-left: 35%;
+  }
 
 }
 
@@ -565,7 +608,7 @@ a[data-modal]:active {
   footer {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
-    margin: 10px;
+    margin: 0px;
     padding: 0px;
     width: unset;
   }
