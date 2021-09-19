@@ -18,6 +18,14 @@
                 <li><a href="contato.html">CONTATO</a></li>
                 <li><a href="saibamais.html">SAIBA MAIS</a></li>
             </ul>
+            <ul class="btn-container">
+                <li><button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button></li> 
+                <li><button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button></li>
+            </ul>   
+            <ul>
+                <li><a href="index.html" accesskey="2">Início do Menu [Alt + 2]</a></li>
+                <li><a href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Alto contraste [Alt + 3]</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -103,8 +111,8 @@
                     <img alt="Foto de eduardo dalmazo" class="photo-profile" src="imagens/eduardo-dalmazo.png">
                     <h2>Eduardo Dalmazo</h2>
                     <br>
-                    <a href="https://linkedin.com/in/herick-bomtorin/" target="_blank"><img alt="Ir para o perfil de Eduardo Dalmazo no Linkedin." class="linkedin" src="imagens/linkedin.svg"/></a>
-    
+                    <a href="https://linkedin.com/in/herick-bomtorin/" target="_blank"><img alt="Ir para o perfil de Eduardo Dalmazo no Linkedin." class="linkedin" src="imagens/linkedin.svg"/></a> 
+
                     <a data-modal="modal-4">Leia mais</a>
     
                     <div class="modal" id="modal-4">
@@ -169,5 +177,7 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
       </script>
       <script src="js/quemsomos.js"></script>
+      <script src="js/acessibilidade.js"></script>
+      <script src="js/aumentadiminuir.js"></script>
 </body>
 </html>

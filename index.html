@@ -18,6 +18,14 @@
                 <li><a href="contato.html">CONTATO</a></li>
                 <li><a href="saibamais.html">SAIBA MAIS</a></li>
             </ul>
+            <ul class="btn-container">
+                <li><button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button></li> 
+                <li><button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button></li>
+            </ul>    
+            <ul>
+                <li><a href="index.html" accesskey="2">Início do Menu [Alt + 2]</a></li>
+                <li><a href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Alto contraste [Alt + 3]</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -44,7 +52,7 @@
         <ul class="secaoDestaques3">
             <li>
                 <img class="imgDestaque" src="imagens/noticia2.png">
-                <h3 class="textoDestaque">Exercícios regulares previnem agravamento da Covid-19...</br><a class="saibaMais" href="https://ge.globo.com/eu-atleta/saude/noticia/exercicios-regulares-previnem-agravamento-da-covid-19.ghtml">Saiba mais</a></h3>
+                <h3 class="textoDestaque">Exercícios regulares previnem agravamento da Covid-19...<a class="saibaMais" href="https://ge.globo.com/eu-atleta/saude/noticia/exercicios-regulares-previnem-agravamento-da-covid-19.ghtml">Saiba mais</a></h3>
             </li>
             <li>
                 <img class="imgDestaque" src="imagens/noticia3.png">
@@ -77,5 +85,7 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
+  <script src="js/acessibilidade.js"></script>
+  <script src="js/aumentadiminuir.js"></script>
 </body>
 </html>
