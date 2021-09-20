@@ -582,6 +582,7 @@ a[data-modal]:active {
   /* big landscape tablets, laptops, and desktops */
   .nav-menu {
     min-width: auto;
+    margin-top: 17px;
   }
 
   .nav-acessibilidade {
