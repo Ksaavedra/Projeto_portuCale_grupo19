@@ -1,48 +1,93 @@
-(function () {
-    const Contrast = {
-        storage: 'contrastState',
-        cssClass: 'contrast',
-        currentState: null,
-        check: checkContrast,
-        getState: getContrastState,
-        setState: setContrastState,
-        toogle: toogleContrast,
-        updateView: updateViewContrast
-    };
+// Toggle the dark mode
+// Ativar o modo escuro
 
-    window.toggleContrast = function () { Contrast.toogle(); };
+const html = document.querySelector("html")
+const checkbox = document.querySelector("input[name=theme]")
 
-    Contrast.check();
+const getStyle = (element, style) => 
+    window
+        .getComputedStyle(element)
+        .getPropertyValue(style)
 
-    function checkContrast() {
-        this.updateView();
-    }
+const initialColors = 
+{
+    navBg: getStyle(html, "--nav-bg"),
+    portugal: getStyle(html, "--portugal"),
+    aumento: getStyle(html, "--aumento"),
+    diminuir: getStyle(html, "--diminuir"),
+    color1: getStyle(html, "--color-1"),
+    color2: getStyle(html, "--color-2"),
+    color3: getStyle(html, "--color-3"),
+    color5: getStyle(html, "--color-5"),
+    color6: getStyle(html, "--color-6"),
+    colorHeadings: getStyle(html, "--color-headings"),
+}
 
-    function getContrastState() {
-        return localStorage.getItem(this.storage) === 'true';
-    }
+const darkMode = 
+{
+    navBg:   "#000000",
+    portugal: "url(\"./imagens/mapa-de-portugal-escuro.svg\")",
+    aumento: "url(\"./imagens/aumento-de-letra-escuro.svg\")",
+    diminuir: "url(\"./imagens/diminuicao-de-letra-escuro.svg\")",
+    color1:  "#FF4500",
+    color2:  "#FF4500",
+    color3:  "#FF4500",
+    color5:  "#000000",
+    color6:  "#FFFFFF",
+    colorHeadings: "#FFFFFF",
+}
 
-    function setContrastState(state) {
-        localStorage.setItem(this.storage, '' + state);
-        this.currentState = state;
-        this.updateView();
-    }
+const transformKey = key => 
+    "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
 
-    function updateViewContrast() {
-        const body = document.body;
-        
-        if (!body) return;
+const changeColors = (colors) => 
+{
+    Object.keys(colors).map(key => 
+        html.style.setProperty(transformKey(key), colors[key]) 
+    )
+}
 
-        if (this.currentState === null)
-            this.currentState = this.getState();
+checkbox.addEventListener("change", ({target}) => 
+{
+    target.checked ? changeColors(darkMode) : changeColors(initialColors)
+})
 
-        if (this.currentState)
-            body.classList.add(this.cssClass);
-        else
-            body.classList.remove(this.cssClass);
-    }
+const isExistLocalStorage = (key) => 
+  localStorage.getItem(key) != null
 
-    function toogleContrast() {
-        this.setState(!this.currentState);
-    }
-})();
+const createOrEditLocalStorage = (key, value) => 
+  localStorage.setItem(key, JSON.stringify(value))
+
+const getValeuLocalStorage = (key) =>
+  JSON.parse(localStorage.getItem(key))
+
+checkbox.addEventListener("change", ({target}) => 
+{
+  if (target.checked) 
+  {
+    changeColors(darkMode) 
+    createOrEditLocalStorage('modo','darkMode')
+  } 
+  
+  else 
+  {
+    changeColors(initialColors)
+    createOrEditLocalStorage('modo','initialColors')
+  }
+})
+
+if(!isExistLocalStorage('modo'))
+  createOrEditLocalStorage('modo', 'initialColors')
+
+
+if (getValeuLocalStorage('modo') === "initialColors") 
+{
+  checkbox.removeAttribute('checked')
+  changeColors(initialColors);
+} 
+
+else 
+{
+  checkbox.setAttribute('checked', "")
+  changeColors(darkMode);
+}

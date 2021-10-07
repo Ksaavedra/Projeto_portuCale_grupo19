@@ -9,6 +9,7 @@ window.onload = function() {
 
     // Evento de click para aumentar a fonte
     elementBtnIncreaseFont.addEventListener('click', function(event) {
+        
         fontSize = fontSize + increaseDecrease;
         elementBody.style.fontSize = fontSize + '%';
     });

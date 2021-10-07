@@ -5,33 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cores.css">
     <title>Contato</title>
 </head>
 <body>
     <header>
         <nav>
             <label class="logo"></label>
-            <a href="index.html"><img src="imagens/mapa-de-Portugal-3.png" width="80px" height="70px" alt="logotipo"></a>
+                <a class="logotipo" href="index.html"></a>
             <ul class="nav-menu">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="quemsomos.html">QUEM SOMOS</a></li>
                 <li><a href="contato.html">CONTATO</a></li>
                 <li><a href="saibamais.html">SAIBA MAIS</a></li>
             </ul>
-            <ul class="btn-container">
-                <li><button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button></li> 
-                <li><button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button></li>
-            </ul>   
-            <ul>
-                <li><a href="index.html" accesskey="2">Início do Menu [Alt + 2]</a></li>
-                <li><a href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Alto contraste [Alt + 3]</a></li>
-            </ul>
+            <ul class="nav-acessibilidade">
+                    <li name="increase-font" id="increase-font" title="Aumentar fonte">
+                        <img class="aumento" alt="Aumentar a letra" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="> 
+                    </li> 
+                    <li name="decrease-font" id="decrease-font" title="Diminuir fonte">
+                        <img class="diminuicao" alt="Diminuir" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+                    </li>
+                    
+                    <li class="toggle">
+                        <input id="switch" name="theme" type="checkbox">
+                        <label for="switch">Alto contraste</label>
+                    </li>
+                </ul>    
         </nav>
     </header>
     <section class="formContato">
         <form class="formContato">
-            <iframe class="formContato" src="https://forms.gle/VfiTocAwqhYYMqJf7" 
-            frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+            <embed class="formContato" src="https://docs.google.com/forms/d/e/1FAIpQLSc13RlscCI1_gRFN1B_CSiiJGwWiG3uo78hd8UOs33tXl1Ljg/viewform" 
+            frameborder="0" marginheight="0" marginwidth="0"></embed>
         </form>
     </section>
     <footer>
